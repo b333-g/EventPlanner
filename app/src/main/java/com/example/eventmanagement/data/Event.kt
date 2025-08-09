@@ -1,4 +1,4 @@
-package com.example.eventmanagement
+package com.example.eventmanagement.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

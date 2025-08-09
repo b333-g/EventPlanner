@@ -1,29 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:padding="16dp"
-    android:layout_width="match_parent" android:layout_height="wrap_content">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputTitle"
+   <!-- <com.google.android.material.textfield.TextInputEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Title"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Description"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="false" android:hint="Date"/>
 
     <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false" android:hint="Time (HH:mm)"/>-->
+
+    <LinearLayout
+        android:id="@+id/inputTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_bg"
+        android:padding="5dp"
+        android:layout_toEndOf="@+id/emailImg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Title" />
+
+        <EditText
+            android:id="@+id/eventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:alpha="0.5"
+            android:background="@null"
+            android:fontFamily="sans-serif"
+            android:hint="Event Title"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_bg"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/emailImg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Description" />
+
+        <EditText
+            android:id="@+id/eventDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:alpha="0.5"
+            android:background="@null"
+            android:fontFamily="sans-serif"
+            android:hint="Event Description"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/inputDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_bg"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/emailImg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Date" />
+
+        <EditText
+            android:id="@+id/eventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:alpha="0.5"
+            android:background="@null"
+            android:fontFamily="sans-serif"
+            android:hint="Event Date"
+            android:focusable="false"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+    <LinearLayout
         android:id="@+id/inputTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:focusable="false" android:hint="Time (HH:mm)"/>
+        android:background="@drawable/item_bg"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/emailImg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Time" />
+
+        <EditText
+            android:id="@+id/eventTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:alpha="0.5"
+            android:background="@null"
+            android:fontFamily="sans-serif"
+            android:hint="Event Time"
+            android:focusable="false"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+    </LinearLayout>
 </LinearLayout>

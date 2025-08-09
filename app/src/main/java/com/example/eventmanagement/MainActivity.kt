@@ -1,21 +1,10 @@
 package com.example.eventmanagement
-
-import android.app.AlertDialog
-import com.example.eventmanagement.databinding.FragmentCalendarBinding
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.CalendarView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.eventmanagement.databinding.MainActivityBinding
-import com.google.android.material.datepicker.MaterialDatePicker
-import com.google.android.material.timepicker.MaterialTimePicker
-import com.google.android.material.timepicker.TimeFormat
-import java.text.SimpleDateFormat
-import java.util.*
+import com.example.eventmanagement.ui.CalendarFragment
+import com.example.eventmanagement.ui.UpcomingEventsFragment
 
 class MainActivity : AppCompatActivity() {
 

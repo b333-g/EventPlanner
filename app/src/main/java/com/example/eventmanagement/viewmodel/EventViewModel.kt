@@ -1,7 +1,10 @@
-package com.example.eventmanagement
+package com.example.eventmanagement.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.*
+import com.example.eventmanagement.data.Event
+import com.example.eventmanagement.data.EventDatabase
+import com.example.eventmanagement.data.EventRepository
 import kotlinx.coroutines.launch
 
 class EventViewModel(application: Application) : AndroidViewModel(application) {
@@ -9,7 +12,6 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
     private val repo: EventRepository
     private val _selectedDate = MutableLiveData<Long>()
 
-    // Use switchMap extension (import androidx.lifecycle.switchMap)
     val eventsByDate: LiveData<List<Event>>
 
     val upcomingEvents: LiveData<List<Event>>
@@ -32,5 +34,5 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
 
     fun insert(event: Event) = viewModelScope.launch { repo.insert(event) }
     fun update(event: Event) = viewModelScope.launch { repo.update(event) }
-    fun delete(event: Event) = viewModelScope.launch { repo.delete(event) }
+    fun delete(event: List<Event>) = viewModelScope.launch { repo.delete(event) }
 }
