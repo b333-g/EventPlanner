@@ -8,7 +8,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eventmanagement.R
 import com.example.eventmanagement.data.Event
-import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
