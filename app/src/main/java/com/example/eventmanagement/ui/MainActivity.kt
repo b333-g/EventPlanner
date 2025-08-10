@@ -1,10 +1,9 @@
-package com.example.eventmanagement
+package com.example.eventmanagement.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.eventmanagement.R
 import com.example.eventmanagement.databinding.MainActivityBinding
-import com.example.eventmanagement.ui.CalendarFragment
-import com.example.eventmanagement.ui.UpcomingEventsFragment
 
 class MainActivity : AppCompatActivity() {
 
