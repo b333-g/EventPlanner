@@ -111,7 +111,6 @@ class CalendarFragment : Fragment() {
         eventTime.setOnClickListener {
             val cal = Calendar.getInstance()
 
-            // If time was already picked, use that
             pickedTime.let {
                 val parts = it.split(":")
                 if (parts.size == 2) {
@@ -142,14 +141,10 @@ class CalendarFragment : Fragment() {
                 id = event?.id ?: 0,
                 title = eventTitle.text.toString().trim(),
                 description = eventDesc.text.toString().trim(),
-                date = pickedDate, // start-of-day millis for that date
+                date = pickedDate,
                 time = eventTime.text.toString().trim()
             )
-            if(eventTitle.text.toString().trim().isEmpty()){
-                Toast.makeText(requireContext(), "Title cannot be empty", Toast.LENGTH_SHORT).show()
-                return@setPositiveButton
-            }
-
+            
             if (event == null) vm.insert(newEvent) else vm.update(newEvent)
             dialog.dismiss()
         }

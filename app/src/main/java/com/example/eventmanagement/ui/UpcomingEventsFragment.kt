@@ -18,8 +18,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eventmanagement.viewmodel.EventViewModel
 import com.example.eventmanagement.R
-import com.example.eventmanagement.ui.CalendarFragment.Companion.startOfDayMillis
 import com.example.eventmanagement.data.Event
+import com.example.eventmanagement.ui.CalendarFragment.Companion.startOfDayMillis
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.DateValidatorPointForward
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -32,7 +32,7 @@ import java.util.Locale
 
 class UpcomingEventsFragment : Fragment() {
 
-    private val vm: EventViewModel by activityViewModels()
+    val vm: EventViewModel by activityViewModels()
     private lateinit var adapter: EventAdapter
     private lateinit var recyclerView: RecyclerView
     private var selectedDateStartMillis: Long = startOfDayMillis(System.currentTimeMillis())
@@ -44,7 +44,7 @@ class UpcomingEventsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val root = inflater.inflate(R.layout.fragment_upcoming_events, container, false)
         recyclerView = root.findViewById(R.id.recyclerView)
-        adapter = EventAdapter(onActionModeStart = { startActionMode() }, onSelectionChanged = { count -> updateMenuState(count) },onEdit = {openDialog(it)}, onDelete = { selectedEvents -> vm.delete(selectedEvents) })
+        adapter = EventAdapter(onActionModeStart = { startActionMode() }, onSelectionChanged = { count -> updateMenuState(count) },onEdit = {event -> openDialog(event)}, onDelete = { selectedEvents -> vm.delete(selectedEvents) })
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
 

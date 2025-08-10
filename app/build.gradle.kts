@@ -62,17 +62,21 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    runtimeOnly(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.fragment.ktx)
 
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    //coroutines
+    runtimeOnly(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.android)
+
+    //Room
     implementation(libs.androidx.room.runtime.v261)
     implementation(libs.androidx.room.ktx)
-    //noinspection KaptUsageInsteadOfKsp
     ksp(libs.androidx.room.compiler.v250)
 
+    //livedata & viewmodel
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    //material
     implementation(libs.material)
-    implementation(libs.androidx.fragment.ktx)
 }

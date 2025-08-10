@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.eventmanagement.R
 import com.example.eventmanagement.data.Event
 import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
@@ -106,8 +107,8 @@ class EventAdapter(
 
 
     private fun getDate(d:Long): String {
-       val date = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT, Locale.getDefault()).format(Date(d)).replace("00:00","")
-        return date
+        val formatter = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
+        return formatter.format(Date(d))
     }
 
     override fun getItemCount(): Int = events.size
